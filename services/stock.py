@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+import os
 import requests
 from datetime import datetime
 import mysql.connector
@@ -7,7 +8,7 @@ import mysql.connector
 router = APIRouter()
 
 # Polygon.io API key
-POLYGON_IO_API_KEY = 'ChbFJ6_V5_U2RErrENxyMHoQ9e54FG5p'
+POLYGON_IO_API_KEY = os.environ['POLYGON_IO_API_KEY']
 
 # MySQL database configuration
 db_config = {
@@ -106,7 +107,7 @@ def fetch_and_insert_multiple_data():
 # router = APIRouter()
 
 # # Polygon.io API key
-# POLYGON_IO_API_KEY = 'ChbFJ6_V5_U2RErrENxyMHoQ9e54FG5p'
+# POLYGON_IO_API_KEY = os.environ.get('POLYGON_IO_API_KEY')
 
 # # MySQL database configuration
 # db_config = {
@@ -198,7 +199,7 @@ def fetch_and_insert_multiple_data():
 # router = APIRouter()
 
 # # Polygon.io API key
-# POLYGON_IO_API_KEY = 'ChbFJ6_V5_U2RErrENxyMHoQ9e54FG5p'
+# POLYGON_IO_API_KEY = os.environ.get('POLYGON_IO_API_KEY')
 
 # # MySQL database configuration
 # db_config = {
@@ -265,7 +266,7 @@ def fetch_and_insert_multiple_data():
 # import mysql.connector
 
 # # Polygon.io API key
-# POLYGON_IO_API_KEY = 'ChbFJ6_V5_U2RErrENxyMHoQ9e54FG5p'
+# POLYGON_IO_API_KEY = os.environ.get('POLYGON_IO_API_KEY')
 
 # # Function to fetch data from Polygon.io
 # def fetch_polygon_data(ticker):
