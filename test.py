@@ -1,7 +1,8 @@
+import os
 import requests
 
 # Define your API key (replace with your actual API key)
-POLYGON_IO_API_KEY = 'MJs5q7JnmTgh8CsA0PDxE2yOI8JeukBX'
+POLYGON_IO_API_KEY = os.environ['POLYGON_IO_API_KEY']
 
 def fetch_polygon_data(symbol, start_date, end_date):
     url = f'https://api.polygon.io/v2/aggs/ticker/{symbol}/range/1/day/{start_date}/{end_date}?apiKey={POLYGON_IO_API_KEY}'
@@ -74,7 +75,7 @@ except Exception as e:
 # import mysql.connector
 
 # # Polygon.io API key
-# POLYGON_IO_API_KEY = 'ChbFJ6_V5_U2RErrENxyMHoQ9e54FG5p'
+# POLYGON_IO_API_KEY = os.environ.get('POLYGON_IO_API_KEY')
 
 # # Function to fetch data from Polygon.io
 # def fetch_polygon_data(ticker):
